@@ -34,7 +34,12 @@ jobs:
 
     - name: Execute build script
       run: bash ./build.sh
-      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: apk
+        path: |  
+          ./eden/src/android/eden.apk
     - name: Release "eden"
       uses: softprops/action-gh-release@v1
       with:
