@@ -41,6 +41,6 @@ jobs:
       with:
         body: build
         tag_name: github_run
-        name: Weekly Action Release
+        name: eden dev build
         files: |
            ./eden/src/android/eden.apk
