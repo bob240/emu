@@ -14,21 +14,21 @@ jobs:
         sudo apt-get update -y
         sudo apt-get install ccache apksigner glslang-tools libvulkan-dev git -y
     - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
+      uses: actions/setup-java@v4
+      with:
           distribution: 'temurin'
           java-version: 21
           
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v4
-        with:
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
+      with:
           cache-read-only: false
         
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v2
         
-      - name: Accept Android SDK Licenses
-        run:  |
+    - name: Accept Android SDK Licenses
+      run:  |
           yes | sdkmanager --licenses
           sdkmanager "ndk;25.2.9519653" "cmake;3.22.1"      
 
