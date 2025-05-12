@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   
 jobs:
-  start_building_turnip:
+  start_building_eden:
     runs-on: ubuntu-24.04
     steps:
     - uses: actions/checkout@4.2.2
