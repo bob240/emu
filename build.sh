@@ -1,10 +1,10 @@
-#git clone https://git.eden-emu.dev/eden-emu/eden
-#cd eden
-git clone https://git.citron-emu.org/citron/emu
-cd emu
+git clone https://git.eden-emu.dev/eden-emu/eden
+cd eden
+#git clone https://git.citron-emu.org/citron/emu
+#cd emu
 git submodule update --init --recursive
 cd src/android
 chmod +x ./gradlew
 ./gradlew assembleRelease --console=plain --info -Dorg.gradle.caching=true
 APK_PATH=$(find app/build/outputs/apk -type f -name "*.apk" | head -n 1)
-mv "$APK_PATH" ./cirton.apk
+mv "$APK_PATH" ./eden.apk
