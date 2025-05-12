@@ -1,5 +1,7 @@
-git clone https://git.eden-emu.dev/eden-emu/eden
-cd eden
+#git clone https://git.eden-emu.dev/eden-emu/eden
+#cd eden
+git clone https://git.citron-emu.org/citron/emu
+cd emu
 git submodule update --init --recursive
 cd src/android
 chmod +x ./gradlew
