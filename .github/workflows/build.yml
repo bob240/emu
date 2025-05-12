@@ -43,4 +43,4 @@ jobs:
         tag_name: github_run
         name: Weekly Action Release
         files: |
-           ./eden/src/android/cirton.apk
+           ./eden/src/android/eden.apk
