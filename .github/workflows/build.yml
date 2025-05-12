@@ -1,0 +1,45 @@
+name: Build "eden"
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  start_building_turnip:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@4.2.2
+
+    - name: Prepare environment
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install ccache apksigner glslang-tools libvulkan-dev git -y
+    - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 21
+          
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          cache-read-only: false
+        
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+        
+      - name: Accept Android SDK Licenses
+        run:  |
+          yes | sdkmanager --licenses
+          sdkmanager "ndk;25.2.9519653" "cmake;3.22.1"      
+
+    - name: Execute build script
+      run: bash ./build.sh
+      
+    - name: Release "eden"
+      uses: softprops/action-gh-release@v1
+      with:
+        body: build
+        tag_name: github_run
+        name: Weekly Action Release
+        files: |
+           ./eden/src/android/eden.apk
