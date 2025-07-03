@@ -30,7 +30,7 @@ jobs:
     - name: Accept Android SDK Licenses
       run:  |
           yes | sdkmanager --licenses
-          sdkmanager "ndk;25.2.9519653" "cmake;3.22.1"      
+          sdkmanager "cmake;3.22.1"      
 
     - name: Execute build script
       run: bash ./build.sh
