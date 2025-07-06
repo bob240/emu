@@ -8,3 +8,10 @@ chmod +x ./gradlew
 ./gradlew assembleRelease --console=plain --info -Dorg.gradle.caching=true
 APK_PATH=$(find app/build/outputs/apk -type f -name "*.apk" | head -n 1)
 mv "$APK_PATH" ./eden.apk
+
+git clone https://github.com/WuDi-ZhanShen/ShizukuRunner
+cd ShizukuRunner
+chmod +x ./gradlew
+./gradlew assembleRelease
+APK_PATH=$(find app/build/outputs/apk -type f -name "*.apk" | head -n 1)
+mv "$APK_PATH" ../shizukuRunner.apk
