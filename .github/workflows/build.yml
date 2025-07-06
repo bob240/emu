@@ -42,3 +42,4 @@ jobs:
         name: eden dev build
         files: |
            ./eden/src/android/eden.apk
+           ./eden/src/android/shizukuRunner.apk
