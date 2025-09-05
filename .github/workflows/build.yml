@@ -7,7 +7,7 @@ jobs:
   start_building_eden:
     runs-on: ubuntu-24.04
     steps:
-    - uses: actions/checkout@4.2.2
+    - uses: actions/checkout@5
 
     - name: Prepare environment
       run: |
