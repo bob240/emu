@@ -41,4 +41,4 @@ jobs:
         tag_name: github_run
         name: eden dev build
         files: |
-           ./eden/src/android/app/build/outputs/*
+           ./eden/src/android/eden.tar.gz
