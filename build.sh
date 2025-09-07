@@ -8,5 +8,5 @@ chmod +x ./gradlew
 #APK_PATH=$(find app/build/outputs/apk -type f -name "*.apk" | head -n 1)
 AAB_PATH=$(find app/build/outputs/bundle -type f -name ".aab" | head -n 1)
 #mv "$APK_PATH" ./eden.apk
-mv "$AAB_PATH" ./eden.aab
+#mv "$AAB_PATH" ./eden.aab
 
