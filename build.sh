@@ -5,11 +5,9 @@ cd src/android
 chmod +x ./gradlew
 ./gradlew assembleRelease --console=plain --info -Dorg.gradle.caching=true
 #./gradlew bundleRelease
-cd app/build
-tar -zcvf eden.tar.gz outputs
+tar -zvcf eden.tar.gz app/build/outputs/apk
 
-APK_PATH=$(find app/build/outputs/apk -type f -name "*.apk" | head -n 1)
+#APK_PATH=$(find app/build/outputs/apk -type f -name "*.apk" | head -n 1)
 #AAB_PATH=$(find app/build/outputs/bundle -type f -name ".aab" | head -n 1)
-mv "$APK_PATH" ./eden.apk
+#mv "$APK_PATH" ./eden.apk
 #mv "$AAB_PATH" ./eden.aab
-
