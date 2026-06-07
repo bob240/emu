@@ -4,7 +4,7 @@ git submodule update --init --recursive
 git apply ../1.patch
 cd src/android
 chmod +x ./gradlew
-./gradlew assembleRelease --console=plain --info -Dorg.gradle.caching=true
+./gradlew copyMainlineReleaseOutputs --console=plain --info -Dorg.gradle.caching=true
 #./gradlew bundleRelease
 tar -zvcf eden.tar.gz app/build/outputs/apk
 
