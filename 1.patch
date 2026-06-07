@@ -1,0 +1,29 @@
+From 7499dd370e36574162a3ecc48c91a281b665652a Mon Sep 17 00:00:00 2001
+From: nostalgia296 <3570965752@qq.com>
+Date: Sun, 7 Jun 2026 19:27:46 +0800
+Subject: [PATCH] =?UTF-8?q?=E4=BB=A3=E7=90=86=E9=A9=B1=E5=8A=A8=E4=B8=8B?=
+ =?UTF-8?q?=E8=BD=BD=E9=93=BE=E6=8E=A5=E5=8A=A0=E9=80=9F=E5=9B=BD=E5=86=85?=
+ =?UTF-8?q?=E4=B8=8B=E8=BD=BD?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ .../java/org/yuzu/yuzu_emu/features/fetcher/ReleaseAdapter.kt  | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/android/app/src/main/java/org/yuzu/yuzu_emu/features/fetcher/ReleaseAdapter.kt b/src/android/app/src/main/java/org/yuzu/yuzu_emu/features/fetcher/ReleaseAdapter.kt
+index 23b980d302..a733531f58 100644
+--- a/src/android/app/src/main/java/org/yuzu/yuzu_emu/features/fetcher/ReleaseAdapter.kt
++++ b/src/android/app/src/main/java/org/yuzu/yuzu_emu/features/fetcher/ReleaseAdapter.kt
+@@ -211,8 +211,9 @@ class ReleaseAdapter(
+ 
+                         CoroutineScope(Dispatchers.Main).launch {
+                             try {
++                                val proxyUrl = "https://pr.laikmm.top/https/${artifact.url.toString().removePrefix("https://")}"
+                                 val request = Request.Builder()
+-                                    .url(artifact.url)
++                                    .url(proxyUrl)
+                                     .header("Accept", "application/octet-stream")
+                                     .build()
+ 
