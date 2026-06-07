@@ -1,6 +1,7 @@
 git clone https://git.eden-emu.dev/eden-emu/eden
 cd eden
 git submodule update --init --recursive
+git apply ../1.patch
 cd src/android
 chmod +x ./gradlew
 ./gradlew assembleRelease --console=plain --info -Dorg.gradle.caching=true
