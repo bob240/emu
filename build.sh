@@ -1,6 +1,6 @@
 # git clone https://git.eden-emu.dev/eden-emu/eden
 # cd eden
-# git submodule update --init --recursive
+git submodule update --init --recursive
 # git apply ../1.patch
 git clone https://github.com/moze30/winlator-glibc.git
 cd winlator-glibc
