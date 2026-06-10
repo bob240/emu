@@ -3,8 +3,8 @@
 # git submodule update --init --recursive
 # git apply ../1.patch
 git clone https://github.com/moze30/winlator-glibc.git
-git submodule update --init --recursive
 cd winlator-glibc
+git submodule update --init --recursive
 #cd src/android
 chmod +x ./gradlew
 #./gradlew copyMainlineReleaseOutputs --console=plain --info -Dorg.gradle.caching=true
